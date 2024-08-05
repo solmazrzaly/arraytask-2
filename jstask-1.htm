@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Berber</title>
+    <style>
+        div{
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+<body>
+    <!--"ber"-ler cumlede ber hansi indeksle baslayir-->
+    <div id="text"></div>
+    <script>
+        const text = document.querySelector("#text")
+        let array = "Bir bərbər bir bərbərə gəl bərabər bir bərbər dükanı açaq demiş";
+        let hisse = "bər"
+        let indeks = [] 
+
+        for (let i = 0 ; i < array.length ;i++) {
+            if(array.slice(i, i + hisse.length) == hisse){
+                indeks.push(i)
+              }
+        }
+        console.log(indeks);
+        text.innerHTML = array
+
+    </script>
+</body>
+</html>

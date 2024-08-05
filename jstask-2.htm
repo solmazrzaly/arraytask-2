@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Solmaz</title>
+    <style>
+      p {
+        font-size: 3.5em;
+        color: rgb(97, 2, 38);
+        text-shadow: 5px 5px 5px grey;
+        box-shadow: 5px 1px 5px rgb(193, 11, 57);
+        padding: 30px;
+        margin: 30vh;
+        width: 200px;
+      }
+    </style>
+</head>
+<body>
+    <p id="text"></p>
+    <script>
+        const texts = document.querySelector("#text");
+        let ad = "Solmaz";
+        let index = 0;
+
+        function yaz() {
+            if (index < ad.length) {
+                texts.innerHTML += ad[index];
+                index++;
+                setTimeout(yaz, 1500);
+            }
+        }
+        //console.log(ad[0])
+    
+        yaz();
+    </script>  
+</body>
+</html>
